@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {
+            text-align: left;
+        }
+        
+        div {
+            text-align: left;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .file-upload {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: #8458b3;
+            color: #fff;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+        
+        .file-upload input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="background-color:#a0d2eb;">
+    <h1>Panini Pande (100206414)</h1> 
+    <div>
+        <form method="POST" action="/AddPicture" style="font-weight: bold" >
+            Enter the name: <input type="text" name="name1" />
+            <div class="buttons-container">
+                <label for="pic1" class="file-upload">
+                    Choose a file
+                    <input type="file" id="pic1" accept="static/*" name="pic1" />
+                </label>
+                <input type="submit" style="font-weight: bold; border-radius: 5px; background-color: #8458b3; color: #fff; padding: 8px 16px; border: none; cursor: pointer; transition: background-color 0.3s, opacity 0.3s;" name="Update"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

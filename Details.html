@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){
+        background-color: #f2f2f2;
+      }
+      
+      #customers tr:hover {
+        background-color: #c7e5f7;
+      }
+      
+      #customers th {
+        padding: 12px;
+        text-align: left;
+        background-color: #436283;
+        color: white;
+      }
+      
+      h1, div {
+        text-align: left;
+      }
+      </style>
+   </head>
+   <body style="background-color:#a0d2eb;">   
+      <h1>Panini Pande (1002064144)</h1>
+      <div>
+         <table id='customers'>
+            <tr>
+               <th>Name</th>
+               <th>State</th>
+               <th>Salary</th>
+               <th>Grade</th>
+               <th>Room</th>
+               <th>Telnum</th>
+               <th>Image Name</th> 
+               <th>Image</th> 
+               <th>Keywords</th> 
+            </tr>
+            {% for col in rows %}
+            <tr>
+               <td>{{col[0]}}</td>
+               <td>{{col[1]}}</td>
+               <td>{{col[2]}}</td>
+               <td>{{col[3]}}</td>
+               <td>{{col[4]}}</td>
+               <td>{{col[5]}}</td>
+               <td>{{col[6]}}</td>
+               <td><img style="height: 150px" src="static/{{col[6]}}" alt="No Image Found"></td> 
+               <td>{{col[7]}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+      </div>
+      <br>
+   </body>
+</html>
+
